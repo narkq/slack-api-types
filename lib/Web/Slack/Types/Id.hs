@@ -1,25 +1,32 @@
-{-# LANGUAGE DataKinds, KindSignatures, TemplateHaskell #-}
+{-# LANGUAGE DataKinds, KindSignatures #-}
 module Web.Slack.Types.Id
-  ( UserId,
-    BotId,
-    ChannelId,
-    FileId,
-    CommentId,
-    GroupId,
-    IMId,
-    TeamId,
-    Id,
-    getId
-  ) where
+( UserId
+, BotId
+, ChannelId
+, FileId
+, CommentId
+, GroupId
+, IMId
+, TeamId
+, Id
+, getId
+) where
 
+import Control.Lens.TH
 import Data.Aeson
 import Data.Text (Text)
-import Control.Lens.TH
 
-data FieldType = TUser | TBot | TChannel | TFile | TComment | TGroup | TIM | TTeam deriving (Eq, Show)
+data FieldType = TUser
+               | TBot
+               | TChannel
+               | TFile
+               | TComment
+               | TGroup
+               | TIM
+               | TTeam
+               deriving (Eq, Show)
 
 newtype Id (a :: FieldType) = Id { _getId :: Text } deriving (Show, Eq)
-
 
 instance ToJSON (Id a) where
   toJSON (Id uid) = String uid

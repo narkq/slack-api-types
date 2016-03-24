@@ -25,6 +25,14 @@ library
                     , TemplateHaskell
                     , OverloadedStrings
                     , LambdaCase
+  build-depends: base >= 4.8
+               , aeson
+               , errors
+               , lens
+               , lens-aeson
+               , text
+               , time
+               , time-locale-compat
   exposed-modules: Web.Slack.Types
                  , Web.Slack.Types.Base
                  , Web.Slack.Types.Bot
@@ -49,14 +57,4 @@ library
                  , Web.Slack.Types.Time
                  , Web.Slack.Types.Topic
                  , Web.Slack.Types.User
-
-
   other-modules: Web.Slack.Utils
-  build-depends: base >= 4.8
-               , aeson
-               , errors
-               , lens
-               , lens-aeson
-               , text
-               , time
-               , time-locale-compat

@@ -1,5 +1,3 @@
-{-# LANGUAGE OverloadedStrings, TemplateHaskell #-}
-
 module Web.Slack.Types.Error where
 
 import Data.Aeson
