@@ -1,12 +1,12 @@
 {-# LANGUAGE ViewPatterns, GeneralizedNewtypeDeriving, TemplateHaskell #-}
 module Web.Slack.Types.Time where
 
-import Data.Time.Clock.POSIX
-import Data.Aeson
-import Data.Aeson.Types
+import           Control.Error (readZ)
+import           Control.Lens.TH
+import           Data.Aeson
+import           Data.Aeson.Types
 import qualified Data.Text as T
-import Control.Error
-import Control.Lens.TH
+import           Data.Time.Clock.POSIX (POSIXTime)
 
 default ()
 

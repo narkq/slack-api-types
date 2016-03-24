@@ -4,7 +4,6 @@ module Web.Slack.Types (
  module Web.Slack.Types.Channel,
  module Web.Slack.Types.ChannelOpt,
  module Web.Slack.Types.Comment,
- module Web.Slack.Types.Config,
  module Web.Slack.Types.Error,
  module Web.Slack.Types.Event,
  module Web.Slack.Types.Event.Subtype,
@@ -18,9 +17,6 @@ module Web.Slack.Types (
  module Web.Slack.Types.Presence,
  module Web.Slack.Types.Self,
  module Web.Slack.Types.Session,
- module Web.Slack.Types.Slack,
- module Web.Slack.Types.SlackBotSession,
- module Web.Slack.Types.SlackSendQueue,
  module Web.Slack.Types.Team,
  module Web.Slack.Types.TeamPreferences,
  module Web.Slack.Types.Time,
@@ -33,7 +29,6 @@ import Web.Slack.Types.Bot
 import Web.Slack.Types.Channel
 import Web.Slack.Types.ChannelOpt
 import Web.Slack.Types.Comment
-import Web.Slack.Types.Config
 import Web.Slack.Types.Error
 import Web.Slack.Types.Event
 import Web.Slack.Types.Event.Subtype
@@ -47,11 +42,8 @@ import Web.Slack.Types.Preferences
 import Web.Slack.Types.Presence
 import Web.Slack.Types.Self
 import Web.Slack.Types.Session
-import Web.Slack.Types.Slack
-import Web.Slack.Types.SlackBotSession
 import Web.Slack.Types.Team
 import Web.Slack.Types.TeamPreferences
 import Web.Slack.Types.Time
 import Web.Slack.Types.Topic
 import Web.Slack.Types.User
-import Web.Slack.Types.SlackSendQueue

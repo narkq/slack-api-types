@@ -1,0 +1,62 @@
+name:                slack-api-types
+version:             1.0.0.0
+synopsis:            Collection of types for the Slack RTM API.
+description:         See README.md
+license:             MIT
+bug-reports:         https://github.com/mpickering/slack-api/issues
+
+license-file:        LICENSE
+author:              Joe Hillenbrand
+maintainer:          joehillen@gmail.com
+stability:           Experimental
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+source-repository head
+    type: git
+    location: https://github.com/joehillen/slack-api-types.git
+
+
+library
+  hs-source-dirs: lib
+  ghc-options: -Wall -Werror
+  default-language: Haskell2010
+  default-extensions: RankNTypes
+                    , TemplateHaskell
+                    , OverloadedStrings
+                    , LambdaCase
+  exposed-modules: Web.Slack.Types
+                 , Web.Slack.Types.Base
+                 , Web.Slack.Types.Bot
+                 , Web.Slack.Types.Channel
+                 , Web.Slack.Types.ChannelOpt
+                 , Web.Slack.Types.Comment
+                 , Web.Slack.Types.Error
+                 , Web.Slack.Types.Event
+                 , Web.Slack.Types.Event.Subtype
+                 , Web.Slack.Types.File
+                 , Web.Slack.Types.Group
+                 , Web.Slack.Types.IM
+                 , Web.Slack.Types.Id
+                 , Web.Slack.Types.Item
+                 , Web.Slack.Types.Payload
+                 , Web.Slack.Types.Preferences
+                 , Web.Slack.Types.Presence
+                 , Web.Slack.Types.Self
+                 , Web.Slack.Types.Session
+                 , Web.Slack.Types.Team
+                 , Web.Slack.Types.TeamPreferences
+                 , Web.Slack.Types.Time
+                 , Web.Slack.Types.Topic
+                 , Web.Slack.Types.User
+
+
+  other-modules: Web.Slack.Utils
+  build-depends: base >= 4.8
+               , aeson
+               , errors
+               , lens
+               , lens-aeson
+               , text
+               , time
+               , time-locale-compat

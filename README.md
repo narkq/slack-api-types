@@ -1,35 +1,5 @@
-![Travis Build Status](https://travis-ci.org/mpickering/slack-api.svg?branch=master)
+This library provides types for the [Slack Real Time Messaging API](https://api.slack.com/rtm).
 
-Bindings to the Slack RTM API.
+Used by [slack-api-async](https://hackage.haskell.org/package/slack-api-async).
 
-These bindings were developed whilst I was interning at [Borders](http://www.borde.rs/).
-
-More information can be found [here](https://api.slack.com/rtm)
-
-Example
-=======
-
-``` haskell
-module EchoBot where
-
-import Web.Slack
-import Web.Slack.Message
-import System.Environment (lookupEnv)
-import Data.Maybe (fromMaybe)
-import Control.Applicative
-
-myConfig :: String -> SlackConfig
-myConfig apiToken = SlackConfig
-         { _slackApiToken = apiToken -- Specify your API token here
-         }
-
-echoBot :: SlackBot ()
-echoBot (Message cid _ msg _ _ _) = sendMessage cid msg
-echoBot _ = return ()
-
-main :: IO ()
-main = do
-  apiToken <- fromMaybe (error "SLACK_API_TOKEN not set")
-               <$> lookupEnv "SLACK_API_TOKEN"
-  runBot (myConfig apiToken) echoBot ()
-```
+This project is forked from [slack-api](https://hackage.haskell.org/package/slack-api) by Matthew Pickering.
