@@ -1,9 +1,9 @@
-module Web.Slack.Types.ChannelOpt where
+module Slack.API.ChannelOpt where
 
 import Data.Aeson
 import Control.Lens.TH
-import Web.Slack.Types.Event
-import Web.Slack.Types.Time
+import Slack.API.Event
+import Slack.API.Time
 
 
 data ChannelOpt = ChannelOpt

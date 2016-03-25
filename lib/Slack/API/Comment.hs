@@ -1,11 +1,11 @@
-module Web.Slack.Types.Comment where
+module Slack.API.Comment where
 
 import Data.Aeson
 import Control.Lens.TH
 import Data.Text (Text)
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Time
+import Slack.API.Id
+import Slack.API.Time
 
 data Comment = Comment
                { _commentId        :: CommentId

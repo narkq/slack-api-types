@@ -1,15 +1,15 @@
 {-# LANGUAGE ScopedTypeVariables #-}
-module Web.Slack.Types.Item where
+module Slack.API.Item where
 
 import Control.Lens.TH
 import Data.Aeson
 import Data.Text (Text)
 
-import Web.Slack.Types.Comment
-import Web.Slack.Types.File
-import Web.Slack.Types.Id
-import Web.Slack.Types.Time
-import Web.Slack.Types.Base
+import Slack.API.Comment
+import Slack.API.File
+import Slack.API.Id
+import Slack.API.Time
+import Slack.API.Base
 
 
 data Item = MessageItem ChannelId MessageUpdate

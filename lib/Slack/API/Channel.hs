@@ -1,4 +1,4 @@
-module Web.Slack.Types.Channel where
+module Slack.API.Channel where
 
 -- | https://api.slack.com/types/channel
 
@@ -8,10 +8,10 @@ import Data.Text (Text)
 import Control.Lens.TH
 import Data.Maybe (fromMaybe)
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Time
-import Web.Slack.Types.Topic
-import {-# SOURCE #-} Web.Slack.Types.ChannelOpt (ChannelOpt)
+import Slack.API.Id
+import Slack.API.Time
+import Slack.API.Topic
+import {-# SOURCE #-} Slack.API.ChannelOpt (ChannelOpt)
 
 
 data Channel = Channel

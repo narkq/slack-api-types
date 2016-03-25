@@ -1,17 +1,17 @@
-module Web.Slack.Types.Session where
+module Slack.API.Session where
 
 import Control.Lens.TH
 import Data.Aeson
 import Data.Text (Text)
 
-import Web.Slack.Types.Bot
-import Web.Slack.Types.Channel
-import Web.Slack.Types.Group
-import Web.Slack.Types.IM
-import Web.Slack.Types.Self
-import Web.Slack.Types.Team
-import Web.Slack.Types.Time
-import Web.Slack.Types.User
+import Slack.API.Bot
+import Slack.API.Channel
+import Slack.API.Group
+import Slack.API.IM
+import Slack.API.Self
+import Slack.API.Team
+import Slack.API.Time
+import Slack.API.User
 
 
 data SlackSession = SlackSession

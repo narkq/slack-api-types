@@ -1,4 +1,4 @@
-module Web.Slack.Types.Base where
+module Slack.API.Base where
 
 import Data.Text (Text)
 

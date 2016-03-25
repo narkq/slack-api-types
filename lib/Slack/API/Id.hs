@@ -1,5 +1,5 @@
 {-# LANGUAGE DataKinds, KindSignatures #-}
-module Web.Slack.Types.Id
+module Slack.API.Id
 ( UserId
 , BotId
 , ChannelId

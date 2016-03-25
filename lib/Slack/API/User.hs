@@ -1,4 +1,4 @@
-module Web.Slack.Types.User where
+module Slack.API.User where
 
 -- | https://api.slack.com/types/user
 
@@ -8,8 +8,8 @@ import Data.Aeson.Types
 import Data.Maybe (fromMaybe)
 import Data.Text (Text)
 
-import Web.Slack.Types.Base
-import Web.Slack.Types.Id
+import Slack.API.Base
+import Slack.API.Id
 
 
 type Username = Text

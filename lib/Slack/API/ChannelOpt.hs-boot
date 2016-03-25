@@ -1,4 +1,4 @@
-module Web.Slack.Types.ChannelOpt (ChannelOpt) where
+module Slack.API.ChannelOpt (ChannelOpt) where
 
 import Data.Aeson
 

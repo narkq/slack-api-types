@@ -1,4 +1,4 @@
-module Web.Slack.Types.Group where
+module Slack.API.Group where
 
 -- | https://api.slack.com/types/group
 
@@ -7,10 +7,10 @@ import Data.Aeson
 import Data.Aeson.Types
 import Data.Text (Text)
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Time
-import Web.Slack.Types.Topic
-import {-# SOURCE #-} Web.Slack.Types.ChannelOpt (ChannelOpt)
+import Slack.API.Id
+import Slack.API.Time
+import Slack.API.Topic
+import {-# SOURCE #-} Slack.API.ChannelOpt (ChannelOpt)
 
 
 data Group = Group

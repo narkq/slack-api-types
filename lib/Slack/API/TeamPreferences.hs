@@ -1,11 +1,11 @@
-module Web.Slack.Types.TeamPreferences where
+module Slack.API.TeamPreferences where
 
 import Control.Lens.TH
 import Data.Aeson.TH
 import Data.Text (Text)
 
-import Web.Slack.Types.Id
-import Web.Slack.Utils
+import Slack.API.Id
+import Slack.API.Internal
 
 
 data TeamPreferences = TeamPreferences

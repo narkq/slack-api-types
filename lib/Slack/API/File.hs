@@ -1,4 +1,4 @@
-module Web.Slack.Types.File where
+module Slack.API.File where
 
 -- | https://api.slack.com/types/file
 
@@ -9,10 +9,10 @@ import qualified Data.Text as T
 import Data.Maybe
 import Control.Lens.TH
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Comment
-import Web.Slack.Types.Time
-import Web.Slack.Types.Base
+import Slack.API.Id
+import Slack.API.Comment
+import Slack.API.Time
+import Slack.API.Base
 
 
 data File = File

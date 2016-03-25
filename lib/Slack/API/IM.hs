@@ -1,4 +1,4 @@
-module Web.Slack.Types.IM where
+module Slack.API.IM where
 
 -- | https://api.slack.com/types/im
 
@@ -6,9 +6,9 @@ import Control.Lens.TH
 import Data.Aeson
 import Data.Aeson.Types
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Time
-import {-# SOURCE #-} Web.Slack.Types.ChannelOpt (ChannelOpt)
+import Slack.API.Id
+import Slack.API.Time
+import {-# SOURCE #-} Slack.API.ChannelOpt (ChannelOpt)
 
 
 data IM = IM

@@ -1,10 +1,10 @@
-module Web.Slack.Types.Payload where
+module Slack.API.Payload where
 
 import Data.Aeson.TH
 import Data.Char (toLower)
 import Data.Text (Text)
 
-import Web.Slack.Types.Id (ChannelId)
+import Slack.API.Id (ChannelId)
 
 data MessagePayload = MessagePayload
                       { messageId      :: Int

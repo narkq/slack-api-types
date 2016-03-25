@@ -1,6 +1,6 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE ViewPatterns #-}
-module Web.Slack.Types.Time where
+module Slack.API.Time where
 
 import Control.Error (readZ)
 import Control.Lens.TH

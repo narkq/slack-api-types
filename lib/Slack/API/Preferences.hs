@@ -1,10 +1,10 @@
-module Web.Slack.Types.Preferences where
+module Slack.API.Preferences where
 
 import Control.Lens.TH
 import Data.Aeson.TH
 import Data.Text (Text)
 
-import Web.Slack.Utils
+import Slack.API.Internal
 
 
 data Preferences = Preferences

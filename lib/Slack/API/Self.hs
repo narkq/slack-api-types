@@ -1,13 +1,13 @@
-module Web.Slack.Types.Self where
+module Slack.API.Self where
 
 import Control.Lens.TH
 import Data.Aeson
 import Data.Text (Text)
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Preferences
-import Web.Slack.Types.Presence
-import Web.Slack.Types.Time
+import Slack.API.Id
+import Slack.API.Preferences
+import Slack.API.Presence
+import Slack.API.Time
 
 
 data Self = Self

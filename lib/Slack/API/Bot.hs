@@ -1,11 +1,11 @@
-module Web.Slack.Types.Bot where
+module Slack.API.Bot where
 
 import Data.Aeson
 import Control.Lens.TH
 import Data.Text (Text)
 
-import Web.Slack.Types.Id
-import Web.Slack.Types.Base
+import Slack.API.Id
+import Slack.API.Base
 
 data Bot = Bot
            { _botId    :: BotId

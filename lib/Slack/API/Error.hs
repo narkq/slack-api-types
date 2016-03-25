@@ -1,4 +1,4 @@
-module Web.Slack.Types.Error where
+module Slack.API.Error where
 
 import Data.Aeson
 import Control.Lens.TH

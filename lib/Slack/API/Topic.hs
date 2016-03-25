@@ -1,4 +1,4 @@
-module Web.Slack.Types.Topic where
+module Slack.API.Topic where
 
 import Data.Aeson
 import Data.Text (Text)

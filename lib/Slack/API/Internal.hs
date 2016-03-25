@@ -1,6 +1,6 @@
-module Web.Slack.Utils where
+module Slack.API.Internal where
 
-import           Data.Char
+import Data.Char
 
 toSnake :: String -> String
 toSnake (a:b:c)

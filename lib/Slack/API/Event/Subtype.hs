@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs #-}
-module Web.Slack.Types.Event.Subtype
+module Slack.API.Event.Subtype
 ( Subtype(..)
 , subtype
 ) where
@@ -8,12 +8,12 @@ module Web.Slack.Types.Event.Subtype
 
 import Data.Aeson
 import Data.Aeson.Types
-import Web.Slack.Types.Time
-import Web.Slack.Types.Id
-import Web.Slack.Types.File
-import Web.Slack.Types.Comment
-import Web.Slack.Types.Bot
-import Web.Slack.Types.Item
+import Slack.API.Time
+import Slack.API.Id
+import Slack.API.File
+import Slack.API.Comment
+import Slack.API.Bot
+import Slack.API.Item
 import Data.Text (Text)
 import Control.Lens.TH
 

@@ -1,12 +1,12 @@
-module Web.Slack.Types.Team where
+module Slack.API.Team where
 
 import Control.Lens.TH
 import Data.Aeson
 import Data.Text (Text)
 
-import Web.Slack.Types.Base
-import Web.Slack.Types.Id
-import Web.Slack.Types.TeamPreferences
+import Slack.API.Base
+import Slack.API.Id
+import Slack.API.TeamPreferences
 
 
 data Team = Team

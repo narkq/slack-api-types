@@ -1,5 +1,5 @@
 {-# LANGUAGE GADTs, ScopedTypeVariables #-}
-module Web.Slack.Types.Event  where
+module Slack.API.Event  where
 
 -- | https://api.slack.com/rtm
 
@@ -8,20 +8,20 @@ import Data.Aeson
 import Data.Aeson.Types
 import Data.Text (Text)
 
-import Web.Slack.Types.Channel
-import Web.Slack.Types.Bot
-import Web.Slack.Types.Base
-import Web.Slack.Types.User
-import Web.Slack.Types.File
-import Web.Slack.Types.IM
-import Web.Slack.Types.Id
-import Web.Slack.Types.Item
-import Web.Slack.Types.Comment
-import Web.Slack.Types.Error
-import Web.Slack.Types.Event.Subtype
-import Web.Slack.Types.Group
-import Web.Slack.Types.Time
-import Web.Slack.Types.Presence
+import Slack.API.Channel
+import Slack.API.Bot
+import Slack.API.Base
+import Slack.API.User
+import Slack.API.File
+import Slack.API.IM
+import Slack.API.Id
+import Slack.API.Item
+import Slack.API.Comment
+import Slack.API.Error
+import Slack.API.Event.Subtype
+import Slack.API.Group
+import Slack.API.Time
+import Slack.API.Presence
 
 
 type Domain = Text

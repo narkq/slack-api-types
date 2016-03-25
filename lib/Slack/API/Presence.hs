@@ -1,4 +1,4 @@
-module Web.Slack.Types.Presence where
+module Slack.API.Presence where
 
 import Data.Aeson
 import qualified Data.Text as T

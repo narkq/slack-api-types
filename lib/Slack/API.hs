@@ -1,0 +1,49 @@
+module Slack.API (
+ module Slack.API.Base,
+ module Slack.API.Bot,
+ module Slack.API.Channel,
+ module Slack.API.ChannelOpt,
+ module Slack.API.Comment,
+ module Slack.API.Error,
+ module Slack.API.Event,
+ module Slack.API.Event.Subtype,
+ module Slack.API.File,
+ module Slack.API.Group,
+ module Slack.API.IM,
+ module Slack.API.Id,
+ module Slack.API.Item,
+ module Slack.API.Payload,
+ module Slack.API.Preferences,
+ module Slack.API.Presence,
+ module Slack.API.Self,
+ module Slack.API.Session,
+ module Slack.API.Team,
+ module Slack.API.TeamPreferences,
+ module Slack.API.Time,
+ module Slack.API.Topic,
+ module Slack.API.User
+) where
+
+import Slack.API.Base
+import Slack.API.Bot
+import Slack.API.Channel
+import Slack.API.ChannelOpt
+import Slack.API.Comment
+import Slack.API.Error
+import Slack.API.Event
+import Slack.API.Event.Subtype
+import Slack.API.File
+import Slack.API.Group
+import Slack.API.IM
+import Slack.API.Id
+import Slack.API.Item
+import Slack.API.Payload
+import Slack.API.Preferences
+import Slack.API.Presence
+import Slack.API.Self
+import Slack.API.Session
+import Slack.API.Team
+import Slack.API.TeamPreferences
+import Slack.API.Time
+import Slack.API.Topic
+import Slack.API.User
