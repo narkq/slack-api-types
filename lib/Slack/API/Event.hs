@@ -160,7 +160,7 @@ parseType o@(Object v) typ = case typ of
   "file_unshared" -> FileUnshared <$> v .: "file"
   "file_public"  -> FilePublic <$> v .: "file"
   "file_private" -> FilePrivate <$> v .: "file"
-  "file_change"  -> FileChange <$> v .: "file"
+  "file_change"  -> FileChange <$> v .: "file_id"
   "file_deleted"  -> FileDeleted <$> v .: "file_id" <*> v .: "event_ts"
   "file_comment_added" -> FileCommentAdded <$> v .: "file" <*> v .: "comment"
   "file_comment_edited" -> FileCommentEdited <$> v .: "file" <*> v .: "comment"
