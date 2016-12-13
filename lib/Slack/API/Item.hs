@@ -12,7 +12,7 @@ import Slack.API.Time
 import Slack.API.Base
 
 
-data Item = MessageItem ChannelId (Maybe MessageUpdate)
+data Item = MessageItem ChannelId MessageUpdate
           | FileItem File
           | FileCommentItem File Comment
           | ChannelItem ChannelId

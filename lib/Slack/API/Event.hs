@@ -22,6 +22,7 @@ import Slack.API.Event.Subtype
 import Slack.API.Group
 import Slack.API.Time
 import Slack.API.Presence
+import Slack.API.ReactionItem
 
 
 type Domain = Text
@@ -68,8 +69,8 @@ data Event where
   PrefChange :: Pref -> Event
   UserChange :: User -> Event
   TeamJoin :: User -> Event
-  ReactionAdded :: UserId -> Maybe Text -> Item -> SlackTimeStamp -> Event
-  ReactionRemoved :: UserId -> Maybe Text -> Item -> SlackTimeStamp -> Event
+  ReactionAdded :: UserId -> Maybe Text -> ReactionItem -> UserId -> SlackTimeStamp -> Event
+  ReactionRemoved :: UserId -> Maybe Text -> ReactionItem -> UserId -> SlackTimeStamp -> Event
   StarAdded :: UserId -> Item -> SlackTimeStamp -> Event
   StarRemoved :: UserId -> Item -> SlackTimeStamp -> Event
   EmojiChanged :: SlackTimeStamp -> Event
@@ -169,8 +170,8 @@ parseType o@(Object v) typ = case typ of
   "pref_change" -> curry PrefChange <$> v .: "name" <*> v .: "value"
   "user_change" -> UserChange <$> v .: "user"
   "team_join"   -> TeamJoin <$> v .: "user"
-  "reaction_added" -> ReactionAdded <$> v .: "user" <*> v .:? "reaction" <*> v .: "item" <*> v .: "event_ts"
-  "reaction_removed" -> ReactionRemoved <$> v .: "user" <*> v .:? "reaction" <*> v .: "item" <*> v .: "event_ts"
+  "reaction_added" -> ReactionAdded <$> v .: "user" <*> v .:? "reaction" <*> v .: "item" <*> v .: "item_user" <*> v .: "event_ts"
+  "reaction_removed" -> ReactionRemoved <$> v .: "user" <*> v .:? "reaction" <*> v .: "item" <*> v .: "item_user" <*> v .: "event_ts"
   "star_added" ->  StarAdded <$> v .: "user" <*> v .: "item" <*> v .: "event_ts"
   "star_removed" -> StarRemoved <$> v .: "user" <*> v .: "item" <*> v .: "event_ts"
   "emoji_changed" -> EmojiChanged <$> v .: "event_ts"
