@@ -58,7 +58,7 @@ data Event where
   FileUnshared :: File -> Event
   FilePublic :: File -> Event
   FilePrivate :: FileId -> Event
-  FileChange  :: File -> Event
+  FileChange  :: FileId -> SlackTimeStamp -> Event
   FileDeleted :: FileId -> SlackTimeStamp -> Event
   FileCommentAdded :: File -> Comment -> Event
   FileCommentEdited :: File -> Comment -> Event
@@ -160,7 +160,7 @@ parseType o@(Object v) typ = case typ of
   "file_unshared" -> FileUnshared <$> v .: "file_id"
   "file_public"  -> FilePublic <$> v .: "file_id"
   "file_private" -> FilePrivate <$> v .: "file_id"
-  "file_change"  -> FileChange <$> v .: "file_id"
+  "file_change"  -> FileChange <$> v .: "file_id" <*> v .: "event_ts"
   "file_deleted"  -> FileDeleted <$> v .: "file_id" <*> v .: "event_ts"
   "file_comment_added" -> FileCommentAdded <$> v .: "file" <*> v .: "comment"
   "file_comment_edited" -> FileCommentEdited <$> v .: "file" <*> v .: "comment"
