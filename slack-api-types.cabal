@@ -50,6 +50,7 @@ library
                  , Slack.API.Payload
                  , Slack.API.Preferences
                  , Slack.API.Presence
+                 , Slack.API.ReactionItem
                  , Slack.API.Self
                  , Slack.API.Session
                  , Slack.API.Team
