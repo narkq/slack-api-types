@@ -15,6 +15,7 @@ module Slack.API (
  module Slack.API.Payload,
  module Slack.API.Preferences,
  module Slack.API.Presence,
+ module Slack.API.ReactionItem,
  module Slack.API.Self,
  module Slack.API.Session,
  module Slack.API.Team,
@@ -40,6 +41,7 @@ import Slack.API.Item
 import Slack.API.Payload
 import Slack.API.Preferences
 import Slack.API.Presence
+import Slack.API.ReactionItem
 import Slack.API.Self
 import Slack.API.Session
 import Slack.API.Team
