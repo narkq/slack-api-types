@@ -73,7 +73,6 @@ data Preferences = Preferences
                    , _prefSidebarThemeCustomValues        :: Text
                    , _prefFKeySearch                      :: Bool
                    , _prefKKeyOmnibox                     :: Bool
-                   , _prefMacSpeakVoice                   :: Text
                    , _prefMacSpeakSpeed                   :: Int
                    , _prefPushAtChannelSuppressedChannels :: Text
                    , _prefPromptedForEmailDisabling       :: Bool
