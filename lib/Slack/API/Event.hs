@@ -101,10 +101,11 @@ type Pref = (Text, Value)
 instance FromJSON Event where
   parseJSON o@(Object v) = do
     (typ :: Maybe Text) <- v .:? "type"
-    case typ of
-      Just t -> parseType o t
-      Nothing -> do
-        (ok :: Bool) <- v .: "ok"
+    (ok' :: Maybe Bool) <- v .:? "ok"
+    case (typ, ok') of
+      (Just t, _) -> parseType o t
+      (Nothing, Nothing) -> return NoEvent
+      (Nothing, Just ok) -> do
         if ok
           then MessageResponse
                  <$> v .: "reply_to"
